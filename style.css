@@ -69,12 +69,12 @@ html, body {
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 8px;   /* justera 4–10px efter smak */
+  gap: 40px;   /* justera 4–10px efter smak */
 }
 
 /* pump.fun till vänster */
 .pump-logo {
-  width: 30px;   /* matcha visuellt mot X-loggan */
+  width: 100px;   /* matcha visuellt mot X-loggan */
   height: auto;
   opacity: 0.9;
   transition: opacity 0.2s ease;
@@ -89,7 +89,7 @@ html, body {
 
 /* X till höger */
 .x-logo {
-  width: 26px;   /* lite mindre än pump */
+  width: 100px;   /* lite mindre än pump */
   height: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease;
