@@ -21,13 +21,6 @@ html, body {
   padding: 0 16px;
 }
 
-.title {
-  font-size: 0px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 24px;
-}
-
 /* Kort runt videon */
 .card {
   background: none;          /* tar bort den grå bakgrunden */
@@ -64,53 +57,41 @@ html, body {
   line-height: 1.5;
 }
 
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px; /* prova t.ex. 150–200px */
-  height: auto;
-}
-
-/* Rubrikraden */
+/* Rad som centrerar allt */
 .title {
   display: flex;
-  justify-content: center;   /* centrerar hela logogrupperingen */
+  justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 24px; /* behåll din spacing */
 }
 
-/* Grupp med alla tre loggor */
+/* Ny grupp som håller ihop PUMP + PETE + X tätt */
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 8px; /* justera mellanrummet mellan loggorna */
+  gap: 8px;   /* justera 4–10px efter smak */
 }
 
-/* pump.fun-loggan (vänster) */
+/* pump.fun till vänster */
 .pump-logo {
-  width: 30px;      /* justera efter din bilds proportioner */
+  width: 30px;   /* matcha visuellt mot X-loggan */
   height: auto;
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
-.pump-logo:hover {
-  opacity: 1;
-}
+.pump-logo:hover { opacity: 1; }
 
-/* $PETE-loggan (mitten) */
+/* PETE i mitten */
 .logo {
   height: auto;
   max-width: 220px;
 }
 
-/* X-loggan (höger) */
+/* X till höger */
 .x-logo {
-  width: 26px;      /* något mindre än pump.fun-loggan */
+  width: 26px;   /* lite mindre än pump */
   height: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
-.x-logo:hover {
-  opacity: 1;
-}
+.x-logo:hover { opacity: 1; }
