@@ -72,45 +72,45 @@ html, body {
   height: auto;
 }
 
+/* Rubrikraden */
 .title {
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* centrerar hela logogrupperingen */
   align-items: center;
   margin-bottom: 24px;
 }
 
+/* Grupp med alla tre loggor */
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 6px; /* mellanrum mellan PETE och X */
+  gap: 8px; /* justera mellanrummet mellan loggorna */
 }
 
-/* pump.fun-loggan till vänster */
+/* pump.fun-loggan (vänster) */
 .pump-logo {
-  width: 36px;               /* lite större än X-loggan */
+  width: 30px;      /* justera efter din bilds proportioner */
   height: auto;
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
-
 .pump-logo:hover {
   opacity: 1;
 }
 
-/* $PETE-loggan i mitten */
+/* $PETE-loggan (mitten) */
 .logo {
   height: auto;
   max-width: 220px;
 }
 
-/* X-loggan till höger */
+/* X-loggan (höger) */
 .x-logo {
-  width: 28px;
+  width: 26px;      /* något mindre än pump.fun-loggan */
   height: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
-
 .x-logo:hover {
   opacity: 1;
 }
