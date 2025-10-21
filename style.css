@@ -95,3 +95,11 @@ html, body {
   transition: opacity 0.2s ease;
 }
 .x-logo:hover { opacity: 1; }
+
+@media (max-width: 480px) {
+  .logo { max-width: 160px; }
+  .pump-logo { width: 24px; }
+  .x-logo { width: 22px; }
+  .logo-group { gap: 6px; }
+  .caption { font-size: 14px; line-height: 1.3; }
+}
