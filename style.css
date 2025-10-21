@@ -71,3 +71,27 @@ html, body {
   max-width: 300px; /* prova t.ex. 150–200px */
   height: auto;
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* avstånd mellan logga och X-ikon */
+}
+
+.logo {
+  display: block;
+  height: auto;
+  max-width: 220px; /* din huvudlogga */
+}
+
+.x-logo {
+  width: 28px;      /* gör den lite mindre */
+  height: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.x-logo:hover {
+  opacity: 1;
+}
