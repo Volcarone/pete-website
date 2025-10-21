@@ -76,8 +76,13 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;                 /* mellanrum mellan loggorna */
   margin-bottom: 24px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* mellanrum mellan PETE och X */
 }
 
 /* pump.fun-loggan till vänster */
