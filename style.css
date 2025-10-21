@@ -30,11 +30,11 @@ html, body {
 
 /* Kort runt videon */
 .card {
-  background: #8c8c8c;  /* grå rektangel */
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  border: 2px solid rgba(0,0,0,0.25);
+  background: none;          /* tar bort den grå bakgrunden */
+  border: none;              /* tar bort ramen */
+  box-shadow: none;          /* tar bort skuggan */
+  border-radius: 0;          /* tar bort rundade hörn */
+  padding: 0;                /* tar bort inre marginal */
 }
 
 /* Håller 16:9-format och gör videon responsiv */
