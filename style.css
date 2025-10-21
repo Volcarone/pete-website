@@ -1,9 +1,16 @@
 /* Basic reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+@font-face {
+  font-family: 'AppleGaramond';
+  src: url('AppleGaramond-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 html, body {
   height: 100%;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'AppleGaramond', serif;
   background: #3c41e6; /* blå bakgrund lik bilden */
   color: white;
 }
