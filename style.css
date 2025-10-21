@@ -76,17 +76,31 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px; /* avstånd mellan logga och X-ikon */
+  gap: 16px;                 /* mellanrum mellan loggorna */
+  margin-bottom: 24px;
 }
 
-.logo {
-  display: block;
+/* pump.fun-loggan till vänster */
+.pump-logo {
+  width: 36px;               /* lite större än X-loggan */
   height: auto;
-  max-width: 220px; /* din huvudlogga */
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
+.pump-logo:hover {
+  opacity: 1;
+}
+
+/* $PETE-loggan i mitten */
+.logo {
+  height: auto;
+  max-width: 220px;
+}
+
+/* X-loggan till höger */
 .x-logo {
-  width: 28px;      /* gör den lite mindre */
+  width: 28px;
   height: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease;
