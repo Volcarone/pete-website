@@ -1,0 +1,66 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #3c41e6; /* blå bakgrund lik bilden */
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 0px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+/* Kort runt videon */
+.card {
+  background: #8c8c8c;  /* grå rektangel */
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border: 2px solid rgba(0,0,0,0.25);
+}
+
+/* Håller 16:9-format och gör videon responsiv */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Själva videon/iframes fyller hela ytan */
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #000;
+}
+
+.caption {
+  opacity: 0.9;
+  margin-top: 18px;
+  line-height: 1.5;
+}
+
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; /* prova t.ex. 150–200px */
+  height: auto;
+}
