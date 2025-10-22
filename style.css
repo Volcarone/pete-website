@@ -13,8 +13,28 @@
 html, body {
   height: 100%;
   font-family: 'AppleGaramond', serif;
-  background: #3c41e6; /* blå bakgrund lik bilden */
+  background: transparent; /* blå bakgrund lik bilden */
   color: white;
+  font-size: 18px;
+}
+
+/* Full-page background image behind everything */
+body::before {
+  content: "";
+  position: fixed;      /* sticks to the viewport */
+  inset: 0;
+  background: url('city-bg.png') center / cover no-repeat;
+  z-index: -1;          /* sits behind all content */
+  filter: blur(4px) brightness(0.75);         /* or try blur(2px) brightness(0.9) */
+}
+
+/* Optional: add a subtle overlay for contrast */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);  /* darken a touch for readability */
+  z-index: -1;
 }
 
 .container {
@@ -87,13 +107,13 @@ html, body {
 /* Animation för PETE-loggan */
 @keyframes pulse {
   0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.95; }
+  50% { transform: scale(1.2); opacity: 0.95; }
   100% { transform: scale(1); opacity: 1; }
 }
 
 .logo {
   height: auto;
-  max-width: 300px;
+  max-width: 350px;
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -137,6 +157,11 @@ html, body {
   margin: 0;
   height: 100%;
 }
+
+/* Space between stacked video sections */
+.video-section { margin-top: 32px; }
+.video-section:first-of-type { margin-top: 0; }
+   
 
 @media (max-width: 480px) {
   .logo { max-width: 160px; }
