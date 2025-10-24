@@ -141,9 +141,12 @@ body::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(6px) brightness(0.7);
+  filter: blur(4px) brightness(0.7);
   transform: scale(1.05);
   z-index: 0;
+
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 .title { z-index: 1; }
 
@@ -162,6 +165,36 @@ body::after {
 .video-section { margin-top: 32px; }
 .video-section:first-of-type { margin-top: 0; }
    
+/* Default överallt */
+html, body {
+  cursor: url('cursor-default.png') 16 16, auto;
+}
+
+/* Hover över klickbara element (länkar, knappar, etc.) */
+a, button, [role="button"], .btn {
+  cursor: url('cursor-hover.png') 16 16, pointer;
+}
+
+/* Active (mousedown) – CSS räcker på elementnivå */
+a:active, button:active, [role="button"]:active, .btn:active {
+  cursor: url('cursor-active.png') 16 16, pointer;
+}
+
+/* Global aktiv cursor medan musknappen hålls nere var som helst */
+body.is-clicking {
+  cursor: url('cursor-active.png') 16 16, auto;
+}
+
+#custom-cursor.is-angry {
+  background-image: url('cursor-angry.png'); /* lägg din sura bild här */
+  transform: translate(-50%, -50%) rotate(10deg) scale(1.2);
+  filter: hue-rotate(-20deg) brightness(0.9);
+}
+
+/* Angry-läge */
+body.angry-cursor {
+  cursor: url('cursor-angry.png') 16 16, auto !important;
+}
 
 @media (max-width: 480px) {
   .logo { max-width: 160px; }
