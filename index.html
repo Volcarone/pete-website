@@ -1,4 +1,9 @@
 <!doctype html>
+
+<link rel="preload" as="image" href="cursor-default.png">
+<link rel="preload" as="image" href="cursor-hover.png">
+<link rel="preload" as="image" href="cursor-active.png">
+
 <html lang="sv">
   <head>
     <meta charset="utf-8" />
@@ -19,7 +24,7 @@
         <a href="rick.html">
           <img src="pete-logo.png" alt="$PETE logo" class="logo">
         </a>
-        <a href="https://x.com/pete" target="_blank" rel="noopener">
+        <a href="https://x.com/LonelyPeteOnSol" target="_blank" rel="noopener">
           <img src="x-logo.png" alt="X (Twitter)" class="x-logo">
         </a>
       </div>
@@ -68,5 +73,48 @@
         </div>
       </div>
     </div>
+    <script>
+      // Lägg till/ta bort en klass på body under mousedown/up
+      document.addEventListener('mousedown', () => document.body.classList.add('is-clicking'));
+      document.addEventListener('mouseup',   () => document.body.classList.remove('is-clicking'));
+      document.addEventListener('mouseleave',() => document.body.classList.remove('is-clicking'));
+    </script>
+
+    <script>
+    (function() {
+      // Justera dessa tre:
+      const threshold = 20;       // hur många klick i rad som krävs
+      const maxGap = 300;         // max tid (ms) mellan klick (t.ex. 300ms = “ganska snabbt”)
+      const angryDuration = 4000; // hur länge cursorn är sur (ms)
+
+      let lastTime = 0;
+      let count = 0;
+
+      document.addEventListener('click', function(e) {
+        // Ignorera klick på interaktiva element
+        if (e.target.closest('a, button, video, iframe, input, textarea, select')) return;
+
+        const now = performance.now();
+        // Om detta klick kom snabbt efter förra => räkna upp, annars börja om
+        if (now - lastTime <= maxGap) {
+          count += 1;
+        } else {
+          count = 1;
+        }
+        lastTime = now;
+
+        if (count >= threshold) {
+          count = 0;
+          lastTime = 0;
+
+          // Trigga arga cursorn
+          document.body.classList.add('angry-cursor');
+          setTimeout(() => {
+            document.body.classList.remove('angry-cursor');
+          }, angryDuration);
+        }
+      });
+    })();
+</script>
   </body>
 </html>
